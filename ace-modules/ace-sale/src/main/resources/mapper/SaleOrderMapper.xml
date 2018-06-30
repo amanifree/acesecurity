@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.github.wxiaoqi.security.acesale.mapper.SaleOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.github.wxiaoqi.security.acesale.entity.SaleOrder" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="_id" property="id" jdbcType="VARCHAR" />
+    <result column="_no" property="no" jdbcType="VARCHAR" />
+    <result column="creat_time" property="creatTime" jdbcType="TIMESTAMP" />
+    <result column="creater" property="creater" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
