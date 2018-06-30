@@ -14,7 +14,7 @@ spring:
         url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_admin_v1?useUnicode=true&characterEncoding=UTF8
         username: root
         password: 123456
-        # Ê¹ÓÃdruidÊı¾İÔ´
+        # ä½¿ç”¨druidæ•°æ®æº
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver
         filters: stat
@@ -58,15 +58,15 @@ eureka:
     instance:
         statusPageUrlPath: /actuator/info
         healthCheckUrlPath: /actuator/health
-        # docker ²¿Êğ¿ªÆô
+        # docker éƒ¨ç½²å¼€å¯
         prefer-ip-address: true
         ip-address: 127.0.0.1
     client:
         serviceUrl:
 #            defaultZone: http://localhost:8761/eureka/
-                    # docker ²¿Êğ¿ªÆô
+                    # docker éƒ¨ç½²å¼€å¯
             defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
-# ±ØĞëÅäÖÃ
+# å¿…é¡»é…ç½®
 feign:
   httpclient:
     enabled: false
@@ -85,9 +85,9 @@ ribbon:
 hystrix:
   threadpool:
     default:
-      coreSize: 1000 ##²¢·¢Ö´ĞĞµÄ×î´óÏß³ÌÊı£¬Ä¬ÈÏ10
-      maxQueueSize: 1000 ##BlockingQueueµÄ×î´ó¶ÓÁĞÊı
-      queueSizeRejectionThreshold: 500 ##¼´Ê¹maxQueueSizeÃ»ÓĞ´ïµ½£¬´ïµ½queueSizeRejectionThreshold¸ÃÖµºó£¬ÇëÇóÒ²»á±»¾Ü¾ø
+      coreSize: 1000 ##å¹¶å‘æ‰§è¡Œçš„æœ€å¤§çº¿ç¨‹æ•°ï¼Œé»˜è®¤10
+            maxQueueSize: 1000 ##BlockingQueueçš„æœ€å¤§é˜Ÿåˆ—æ•°
+            queueSizeRejectionThreshold: 500 ##å³ä½¿maxQueueSizeæ²¡æœ‰è¾¾åˆ°ï¼Œè¾¾åˆ°queueSizeRejectionThresholdè¯¥å€¼åï¼Œè¯·æ±‚ä¹Ÿä¼šè¢«æ‹’ç»
   command:
     default:
       execution:
@@ -96,13 +96,13 @@ hystrix:
             timeoutInMilliseconds: 110000
 
 
-# ÅäÖÃswagger
+# é…ç½®swagger
 swagger:
     enabled: true
     base-package: com.github.wxiaoqi.security.acesale
     title: ace-sale
     version: 1.0.0.SNAPSHOT
-    description: ¹ÜÀíºó¶Ë·şÎñ
+    description: ç®¡ç†åç«¯æœåŠ¡
     contact:
         name: acesale
 
@@ -115,7 +115,7 @@ auth:
     secret: 123456
     token-header: x-client-token
 
-#redis-cache Ïà¹Ø
+#redis-cache ç›¸å…³
 redis:
     pool:
          maxActive: 300
@@ -125,7 +125,7 @@ redis:
     port:  ${REDIS_PORT:6379}
     password:
     timeout: 2000
-    # ·şÎñ»òÓ¦ÓÃÃû
+    # æœåŠ¡æˆ–åº”ç”¨å
     sysName: ace-sale
     enable: true
     database: 0
