@@ -3,8 +3,10 @@ package com.github.wxiaoqi.security.acesale.entity;
 import java.util.Date;
 import javax.persistence.*;
 
+@Table(name = "saleorder")
 public class SaleOrder {
     @Id
+    @GeneratedValue(generator = "UUID")
     @Column(name = "_id")
     private String id;
 

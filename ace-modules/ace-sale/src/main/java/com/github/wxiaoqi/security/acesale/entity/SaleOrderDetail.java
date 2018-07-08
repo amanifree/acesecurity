@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Table(name = "saleorder_detail")
 public class SaleOrderDetail {
     @Id
+    @GeneratedValue(generator = "UUID")
     @Column(name = "_id")
     private String id;
 
